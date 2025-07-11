@@ -4,7 +4,7 @@
     align-items: center;
     column-gap: 25px;
 }
- .right-imgs{
+.right-imgs{
     width: 18px;
 
     .rgt-img{
@@ -36,6 +36,10 @@
         font-size: 16px;
         color: #333;
     }
+}
+.vr-center{
+    display: flex;
+    align-items: center;
 }
 // commen styles end
 .main-layout{
@@ -296,6 +300,116 @@
 }
 // Dropdown style end
 // Media query start
+.upload-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: #fff;
+    z-index: 4;
+    width: 600px;
+    border-radius: 16px;
+    padding: 30px;
+    // opacity: 0;
+    transition: opacity 0.4s ease , transform 0.4s ease-in;
+
+    .modal-header {
+        justify-content: space-between;
+
+        .modal-name {
+            font-size: 22px;
+            color: #333;
+            letter-spacing: 0.5px;
+        }
+
+        .cls-icon {
+            width: 28px;
+            height: 28px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            justify-content: center;
+            color: #333;
+        }
+    }
+
+    .upload-section {
+        margin-block: 32px;
+
+        .upload-txt {
+            font-size: 18px;
+            color: #757575;
+            font-weight: 500;
+        }
+
+        .upload-box {
+            border: 2px dashed #e8e8e8;
+            border-radius: 12px;
+            background-color: #f9fbfc;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 12px;
+            height: 200px;
+        }
+
+        .upload-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #f2f3f7;
+            justify-content: center;
+
+            .upload-image {
+                width: 25px;
+            }
+        }
+
+        .file-upload {
+            display: none;
+        }
+
+        .dd-txt {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-block: 20px 10px;
+        }
+
+        .limit-size-txt {
+            color: #515151;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+.upload-modal.hide-modal{
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    pointer-events: none;
+}
+.upload-modal.show-modal{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+// Upload Modal end
+// Overlay start
+.bg-overlay{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+.bg-overlay.hide-overlay{
+    opacity: 0;
+    pointer-events: none;
+}
+.bg-overlay.show-overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+// Overlay end
 @media screen and (max-width : 768px){
     .layouts{
         margin: 0;

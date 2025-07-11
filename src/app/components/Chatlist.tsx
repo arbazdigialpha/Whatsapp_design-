@@ -8,7 +8,7 @@ const Chatlist = () => {
         <li className='chatlist-item'>
           <div className='chatlist-left'>
             <div className="img-wrapper profile-photo">
-              <img src={UserImage.src} alt="user dp" className='pp-img' />
+              <img src={UserImage.src} alt="user dp" className='pp-img' loading='lazy' />
             </div>
             <div className="chatlist-info name-status">
               <h3 className='username'>Swathi - THN</h3>

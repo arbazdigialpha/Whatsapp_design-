@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Message from '../../assets/white_msg.png';
 import ThreeDots from '../../assets/white_dots.png';   
 import Search from '../../assets/search.png';   
-import Dropdown from "./dropdown";
+import Dropdown from "./Dropdown";
 
 const Mob_header_rgt = () => {
   const [showDrop , setShowDrop] = useState(false);
@@ -18,6 +18,7 @@ const Mob_header_rgt = () => {
             src={Search.src}
             alt="search icon"
             className="rgt-img cur-pointer"
+            loading='lazy'
             />
       </div>
       <div className="msg-img-wrapper right-imgs">
@@ -25,6 +26,7 @@ const Mob_header_rgt = () => {
             src={Message.src}
             alt="message icon"
             className="rgt-img msg-img cur-pointer"
+            loading='lazy'
             />
       </div>
       <div className="threedots-img right-imgs">
@@ -33,6 +35,7 @@ const Mob_header_rgt = () => {
             alt="threedots icon"
             className="rgt-img cur-pointer"
             onClick={toggleDropdown}
+            loading='lazy'
             />
             { showDrop && <Dropdown />}
       </div>    

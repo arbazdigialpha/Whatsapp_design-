@@ -12,13 +12,6 @@ const Left_layout = () => {
           {[...Array(25)].map((_, index) => (
             <Chatlist key={index} />
           ))}
-            {/* <Chatlist />
-            <Chatlist />
-            <Chatlist />
-            <Chatlist />
-            <Chatlist />
-            <Chatlist />
-            <Chatlist /> */}
         </section>
     </>
   )
